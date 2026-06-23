@@ -4,7 +4,7 @@ import MandalaDivider from '@/components/ui/MandalaDivider'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react'
-import { weddingData } from '@/data/wedding-data'
+import { useWeddingData } from '@/context/WeddingDataContext'
 import { fadeUp, scaleIn, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
 
@@ -15,6 +15,7 @@ function imgWidth(span: string | undefined) {
 }
 
 export default function GallerySection() {
+  const weddingData = useWeddingData()
   const [selected, setSelected] = useState<string | null>(null)
 
   return (

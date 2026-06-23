@@ -1,12 +1,13 @@
 'use client'
 import { motion } from 'framer-motion'
 import MandalaDivider from '@/components/ui/MandalaDivider'
-import { weddingData } from '@/data/wedding-data'
+import { useWeddingData } from '@/context/WeddingDataContext'
 import { fadeUp, scaleIn, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
 import PichwaiCorner from '@/components/ui/PichwaiCorner'
 
 export default function InvitationSection() {
+  const weddingData = useWeddingData()
   return (
     <section id="invitation" className="pt-44 pb-28 px-6 relative" style={{ background: 'var(--color-surface)' }}>
       <MandalaDivider />

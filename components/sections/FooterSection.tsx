@@ -1,11 +1,12 @@
 'use client'
 import { motion } from 'framer-motion'
 import MandalaDivider from '@/components/ui/MandalaDivider'
-import { weddingData } from '@/data/wedding-data'
+import { useWeddingData } from '@/context/WeddingDataContext'
 import LotusDivider from '@/components/ui/LotusDivider'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 
 export default function FooterSection() {
+  const weddingData = useWeddingData()
   return (
     <footer id="footer" className="pt-44 pb-20 px-6 text-center relative " style={{ background: 'var(--color-surface2)' }}>
       <MandalaDivider />
