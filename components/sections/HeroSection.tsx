@@ -98,7 +98,7 @@ export default function HeroSection() {
         <motion.p variants={fadeUp}
           className="font-sans text-[10px] tracking-[0.5em] uppercase mb-8"
           style={{ color: 'var(--color-accent)', textShadow: '0 0 12px rgba(212,168,48,0.4)' }}>
-          ✦ &nbsp; Sacred Union &nbsp; ✦
+          {weddingData.heroSubtitle || '✦   Sacred Union   ✦'}
         </motion.p>
 
         <motion.div variants={fadeUp} className="mb-4">
@@ -126,7 +126,7 @@ export default function HeroSection() {
         <motion.p variants={fadeUp}
           className="font-serif italic text-sm tracking-wider"
           style={{ color: 'var(--color-text)', opacity: 0.9, textShadow: '0 0 10px rgba(212,168,48,0.3)' }}>
-          {weddingData.tagline}
+          {weddingData.tagline || 'Where sacred circles meet eternal love'}
         </motion.p>
 
         <motion.div variants={fadeUp} className="mt-14 flex flex-col items-center gap-2" style={{ opacity: 0.3 }}>

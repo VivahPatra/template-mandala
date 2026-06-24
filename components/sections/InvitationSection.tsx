@@ -17,10 +17,10 @@ export default function InvitationSection() {
           variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}
         >
           <motion.p variants={fadeUp} className="font-sans text-xs tracking-[0.4em] uppercase mb-4 glow-pulse" style={{ color: 'var(--color-accent)', opacity: 0.7 }}>
-            ✦ &nbsp; Shubh Vivah &nbsp; ✦
+            {weddingData.invitationSubtitle || '✦   Shubh Vivah   ✦'}
           </motion.p>
           <motion.h2 variants={fadeUp} className="font-display shimmer-text" style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)' }}>
-            The Invitation
+            {weddingData.invitationHeading || 'The Invitation'}
           </motion.h2>
           <LotusDivider className="mt-6" />
         </motion.div>
@@ -62,7 +62,7 @@ export default function InvitationSection() {
                 <img src="/assets/man4.png" alt="" style={{ width: 45, height: 'auto', position: 'absolute', zIndex: 2 }} />
               </div>
               <p className="font-sans text-xs tracking-[0.3em] uppercase mt-3 glow-pulse" style={{ color: 'var(--color-accent)', opacity: 0.6 }}>
-                ॥ Shree Ganeshaya Namah ॥
+                {weddingData.invitationBlessing || '॥ Shree Ganeshaya Namah ॥'}
               </p>
             </div>
 
@@ -108,7 +108,7 @@ export default function InvitationSection() {
           {/* Invitation text */}
           <div className="px-10 py-10 text-center">
             <p className="font-serif text-base leading-relaxed" style={{ color: 'var(--color-muted)' }}>
-              {weddingData.invitationText}
+              {weddingData.invitationText || 'With divine blessings and the love of our families, we joyfully invite you to witness the union of two souls.'}
             </p>
             <LotusDivider className="my-8" />
             <p className="font-sans text-sm tracking-widest uppercase" style={{ color: 'var(--color-accent)', opacity: 0.7 }}>
