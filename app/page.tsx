@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { WeddingDataProvider } from '@/context/WeddingDataContext'
-import { EditModeProvider } from '@/context/EditModeContext'
 import CustomCursor from '@/components/layout/CustomCursor'
 import LoadingScreen from '@/components/layout/LoadingScreen'
 import FloatingFABs from '@/components/layout/FloatingFABs'
@@ -20,29 +19,27 @@ export default function Page() {
 
   return (
     <WeddingDataProvider>
-      <EditModeProvider>
-        <CustomCursor />
-        <AnimatePresence>
-          {!loaded && <LoadingScreen key="loading" onComplete={() => setLoaded(true)} />}
-        </AnimatePresence>
-        {loaded && (
-          <>
-            <FloatingFABs />
-            <div className="relative overflow-x-hidden">
-              <main>
-                <HeroSection />
-                <InvitationSection />
-                <CoupleStory />
-                <GallerySection />
-                <EventsSection />
-                <RSVPSection />
-                <CountdownSection />
-                <FooterSection />
-              </main>
-            </div>
-          </>
-        )}
-      </EditModeProvider>
+      <CustomCursor />
+      <AnimatePresence>
+        {!loaded && <LoadingScreen key="loading" onComplete={() => setLoaded(true)} />}
+      </AnimatePresence>
+      {loaded && (
+        <>
+          <FloatingFABs />
+          <div className="relative overflow-x-hidden">
+            <main>
+              <HeroSection />
+              <InvitationSection />
+              <CoupleStory />
+              <GallerySection />
+              <EventsSection />
+              <RSVPSection />
+              <CountdownSection />
+              <FooterSection />
+            </main>
+          </div>
+        </>
+      )}
     </WeddingDataProvider>
   )
 }

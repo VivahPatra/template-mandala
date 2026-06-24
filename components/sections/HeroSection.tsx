@@ -2,8 +2,6 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useWeddingData } from '@/context/WeddingDataContext'
-import { useEditMode } from '@/context/EditModeContext'
-import EditableText from '@/components/ui/EditableText'
 import { fadeUp, staggerContainer } from '@/lib/animations'
 import { formatShortDate } from '@/lib/utils'
 
@@ -25,9 +23,7 @@ function MandalaRing({ size, petals, color, opacity, className }: { size: number
 }
 
 export default function HeroSection() {
-  const weddingDataCtx = useWeddingData()
-  const { data: editData, isEditing } = useEditMode()
-  const weddingData = isEditing ? editData : weddingDataCtx
+  const weddingData = useWeddingData()
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
   const textY = useTransform(scrollYProgress, [0, 1], ['0%', '-30%'])
@@ -106,17 +102,17 @@ export default function HeroSection() {
         </motion.p>
 
         <motion.div variants={fadeUp} className="mb-4">
-          <EditableText tag="h1" field="groomName" className="font-display leading-none shimmer-text" style={{ fontSize: 'clamp(2.8rem, 10vw, 7rem)', letterSpacing: '0.04em', textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 0 40px rgba(212,168,48,0.2)' }}>
+          <h1 className="font-display leading-none shimmer-text" style={{ fontSize: 'clamp(2.8rem, 10vw, 7rem)', letterSpacing: '0.04em', textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 0 40px rgba(212,168,48,0.2)' }}>
             {weddingData.groomName}
-          </EditableText>
+          </h1>
           <div className="flex items-center justify-center gap-6 my-3">
             <div className="h-px w-16 md:w-24" style={{ background: 'linear-gradient(to right, transparent, var(--color-accent))' }} />
             <span className="font-display text-2xl glow-pulse" style={{ color: 'var(--color-accent)' }}>&amp;</span>
             <div className="h-px w-16 md:w-24" style={{ background: 'linear-gradient(to left, transparent, var(--color-accent))' }} />
           </div>
-          <EditableText tag="h1" field="brideName" className="font-display leading-none shimmer-text" style={{ fontSize: 'clamp(2.8rem, 10vw, 7rem)', letterSpacing: '0.04em', textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 0 40px rgba(212,168,48,0.2)' }}>
+          <h1 className="font-display leading-none shimmer-text" style={{ fontSize: 'clamp(2.8rem, 10vw, 7rem)', letterSpacing: '0.04em', textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 0 40px rgba(212,168,48,0.2)' }}>
             {weddingData.brideName}
-          </EditableText>
+          </h1>
         </motion.div>
 
         <motion.div variants={fadeUp} className="flex items-center justify-center gap-4 mt-8 mb-4">
@@ -127,11 +123,11 @@ export default function HeroSection() {
           <div className="h-px w-10" style={{ background: 'var(--color-accent)', opacity: 0.4 }} />
         </motion.div>
 
-        <EditableText tag="p" field="tagline"
+        <motion.p variants={fadeUp}
           className="font-serif italic text-sm tracking-wider"
           style={{ color: 'var(--color-text)', opacity: 0.9, textShadow: '0 0 10px rgba(212,168,48,0.3)' }}>
           {weddingData.tagline}
-        </EditableText>
+        </motion.p>
 
         <motion.div variants={fadeUp} className="mt-14 flex flex-col items-center gap-2" style={{ opacity: 0.3 }}>
           <span className="font-sans text-[9px] tracking-[0.4em] uppercase" style={{ color: 'var(--color-accent)' }}>Scroll</span>

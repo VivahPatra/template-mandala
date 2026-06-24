@@ -1,16 +1,12 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useWeddingData } from '@/context/WeddingDataContext'
-import { useEditMode } from '@/context/EditModeContext'
-import EditableText from '@/components/ui/EditableText'
 import { fadeUp, scaleIn, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
 import PichwaiCorner from '@/components/ui/PichwaiCorner'
 
 export default function VenueSection() {
-  const weddingDataCtx = useWeddingData()
-  const { data: editData, isEditing } = useEditMode()
-  const weddingData = isEditing ? editData : weddingDataCtx
+  const weddingData = useWeddingData()
   return (
     <section id="venue" className="py-28 px-6" style={{ background: 'var(--color-surface2)' }}>
       <div className="max-w-4xl mx-auto">
@@ -37,8 +33,8 @@ export default function VenueSection() {
           {/* Header */}
           <div className="py-12 px-8 text-center" style={{ background: 'linear-gradient(135deg, var(--color-surface2), var(--color-surface))' }}>
             <div className="text-5xl mb-4 float-slow">🏛️</div>
-            <EditableText tag="h3" field="venue.name" className="font-display text-3xl glow-text mb-2" style={{ color: 'var(--color-accent)' }}>{weddingData.venue.name}</EditableText>
-            <EditableText tag="p" field="venue.address" className="font-sans text-sm" style={{ color: 'var(--color-muted)' }}>{weddingData.venue.address}</EditableText>
+            <h3 className="font-display text-3xl glow-text mb-2" style={{ color: 'var(--color-accent)' }}>{weddingData.venue.name}</h3>
+            <p className="font-sans text-sm" style={{ color: 'var(--color-muted)' }}>{weddingData.venue.address}</p>
           </div>
 
           {/* Events at venue */}
