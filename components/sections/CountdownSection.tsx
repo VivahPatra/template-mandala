@@ -4,6 +4,8 @@ import MandalaDivider from '@/components/ui/MandalaDivider'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { motion } from 'framer-motion'
 import { useWeddingData } from '@/context/WeddingDataContext'
+import { useEditMode } from '@/context/EditModeContext'
+import EditableText from '@/components/ui/EditableText'
 import { fadeUp, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
 
@@ -18,7 +20,9 @@ function getTimeLeft(target: Date) {
 }
 
 export default function CountdownSection() {
-  const weddingData = useWeddingData()
+  const weddingDataCtx = useWeddingData()
+  const { data: editData, isEditing } = useEditMode()
+  const weddingData = isEditing ? editData : weddingDataCtx
   const [time, setTime] = useState<ReturnType<typeof getTimeLeft> | null>(null)
 
   useEffect(() => {
@@ -81,15 +85,16 @@ export default function CountdownSection() {
           ))}
         </div>
 
-        <motion.p
-          className="font-serif italic text-center mt-10 text-base opacity-50"
-          style={{ color: 'var(--color-text)' }}
+        <motion.div
+          className="text-center mt-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 0.5 }}
           viewport={{ once: true }}
         >
-          {weddingData.tagline}
-        </motion.p>
+          <EditableText tag="p" field="tagline" className="font-serif italic text-base" style={{ color: 'var(--color-text)' }}>
+            {weddingData.tagline}
+          </EditableText>
+        </motion.div>
       </div>
     </section>
   )

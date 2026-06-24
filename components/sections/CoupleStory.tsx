@@ -3,11 +3,15 @@ import { motion } from 'framer-motion'
 import MandalaDivider from '@/components/ui/MandalaDivider'
 import FlowerOverlay from '@/components/ui/FlowerOverlay'
 import { useWeddingData } from '@/context/WeddingDataContext'
+import { useEditMode } from '@/context/EditModeContext'
+import EditableText from '@/components/ui/EditableText'
 import { fadeUp, slideLeft, slideRight, staggerContainer } from '@/lib/animations'
 import LotusDivider from '@/components/ui/LotusDivider'
 
 export default function CoupleStory() {
-  const weddingData = useWeddingData()
+  const weddingDataCtx = useWeddingData()
+  const { data: editData, isEditing } = useEditMode()
+  const weddingData = isEditing ? editData : weddingDataCtx
   return (
     <section id="story" className="pt-44 pb-28 px-6 relative " style={{ background: 'var(--color-surface)' }}>
       <MandalaDivider />
@@ -56,9 +60,9 @@ export default function CoupleStory() {
                       </motion.div>
                     )}
                     {/* Text */}
-                    <p className="font-sans text-xs tracking-widest uppercase mb-2" style={{ color: 'var(--color-accent)', opacity: 0.65 }}>{milestone.date}</p>
-                    <h3 className="font-display text-2xl mb-2 glow-text" style={{ color: 'var(--color-accent)' }}>{milestone.title}</h3>
-                    <p className="font-serif text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>{milestone.description}</p>
+                    <EditableText tag="p" field="date" index={idx} arrayField="coupleStory" className="font-sans text-xs tracking-widest uppercase mb-2" style={{ color: 'var(--color-accent)', opacity: 0.65 }}>{milestone.date}</EditableText>
+                    <EditableText tag="h3" field="title" index={idx} arrayField="coupleStory" className="font-display text-2xl mb-2 glow-text" style={{ color: 'var(--color-accent)' }}>{milestone.title}</EditableText>
+                    <EditableText tag="p" field="description" index={idx} arrayField="coupleStory" multiline className="font-serif text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>{milestone.description}</EditableText>
                   </div>
 
                   {/* Timeline node */}
