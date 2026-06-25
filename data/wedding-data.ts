@@ -22,19 +22,19 @@ export const weddingData: WeddingConfig = {
   ],
 
   galleryImages: [
-    { src: '/assets/gallery/g1.jpg', alt: 'Couple photo 1', span: 'wide' },
-    { src: '/assets/gallery/g2.jpg', alt: 'Couple photo 2', span: 'tall' },
-    { src: '/assets/gallery/g3.jpg', alt: 'Couple photo 3', span: 'normal' },
-    { src: '/assets/gallery/g4.jpg', alt: 'Couple photo 4', span: 'normal' },
-    { src: '/assets/gallery/g5.jpg', alt: 'Couple photo 5', span: 'wide' },
-    { src: '/assets/gallery/g6.jpg', alt: 'Couple photo 6', span: 'normal' },
+    { src: '/assets/gallery/gallery-1.jpg', alt: 'Couple photo 1', span: 'wide' },
+    { src: '/assets/gallery/gallery-2.jpg', alt: 'Couple photo 2', span: 'tall' },
+    { src: '/assets/gallery/gallery-3.jpg', alt: 'Couple photo 3', span: 'normal' },
+    { src: '/assets/gallery/gallery-4.jpg', alt: 'Couple photo 4', span: 'normal' },
+    { src: '/assets/gallery/gallery-5.jpg', alt: 'Couple photo 5', span: 'wide' },
+    { src: '/assets/gallery/gallery-6.jpg', alt: 'Couple photo 6', span: 'normal' },
   ],
 
   coupleStory: [
-    { date: 'April 2020', title: 'Sacred Meeting', description: 'At a temple festival in Pushkar, their eyes met across the mandala rangoli. The universe had spoken.', icon: '✨', image: '/assets/story/s1.jpg' },
-    { date: 'October 2021', title: 'First Date', description: 'A walk through Jantar Mantar, tracing sacred geometry in the stars. They discovered they orbit the same center.', icon: '⭐', image: '/assets/story/s2.jpg' },
-    { date: 'March 2025', title: 'The Proposal', description: 'In the mirror palace of Amer Fort, surrounded by infinite reflections, he asked the one question. She said yes a thousand times.', icon: '💍', image: '/assets/story/s3.jpg' },
-    { date: 'January 2027', title: 'The Sacred Circle', description: 'Seven pheras around the sacred fire. The mandala of their love story comes full circle.', icon: '🔥', image: '/assets/story/s4.jpg' },
+    { date: 'April 2020', title: 'Sacred Meeting', description: 'At a temple festival in Pushkar, their eyes met across the mandala rangoli. The universe had spoken.', icon: '✨', image: '/assets/story/story-1.jpg' },
+    { date: 'October 2021', title: 'First Date', description: 'A walk through Jantar Mantar, tracing sacred geometry in the stars. They discovered they orbit the same center.', icon: '⭐', image: '/assets/story/story-2.jpg' },
+    { date: 'March 2025', title: 'The Proposal', description: 'In the mirror palace of Amer Fort, surrounded by infinite reflections, he asked the one question. She said yes a thousand times.', icon: '💍', image: '/assets/story/story-3.jpg' },
+    { date: 'January 2027', title: 'The Sacred Circle', description: 'Seven pheras around the sacred fire. The mandala of their love story comes full circle.', icon: '🔥', image: '/assets/story/story-4.jpg' },
   ],
 
   familyBride: [
