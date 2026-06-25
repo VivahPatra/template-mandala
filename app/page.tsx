@@ -13,6 +13,7 @@ import GallerySection from '@/components/sections/GallerySection'
 import RSVPSection from '@/components/sections/RSVPSection'
 import CountdownSection from '@/components/sections/CountdownSection'
 import FooterSection from '@/components/sections/FooterSection'
+import SectionGate from '@/components/ui/SectionGate'
 
 export default function Page() {
   const [loaded, setLoaded] = useState(false)
@@ -28,14 +29,14 @@ export default function Page() {
           <FloatingFABs />
           <div className="relative overflow-x-hidden">
             <main>
-              <HeroSection />
-              <InvitationSection />
-              <CoupleStory />
-              <GallerySection />
-              <EventsSection />
-              <RSVPSection />
-              <CountdownSection />
-              <FooterSection />
+              <SectionGate name="hero"><HeroSection /></SectionGate>
+              <SectionGate name="invitation"><InvitationSection /></SectionGate>
+              <SectionGate name="coupleStory"><CoupleStory /></SectionGate>
+              <SectionGate name="gallery"><GallerySection /></SectionGate>
+              <SectionGate name="events"><EventsSection /></SectionGate>
+              <SectionGate name="rsvp"><RSVPSection /></SectionGate>
+              <SectionGate name="countdown"><CountdownSection /></SectionGate>
+              <SectionGate name="footer"><FooterSection /></SectionGate>
             </main>
           </div>
         </>

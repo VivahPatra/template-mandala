@@ -53,6 +53,7 @@ interface EditorFormData {
   rsvpDeadline?: string
   instagram?: string
   infoCards?: Array<{ icon?: string; title?: string; description?: string }>
+  sections?: Record<string, unknown>
 }
 
 /** Only override a string field when the incoming value is non-empty */
@@ -183,6 +184,10 @@ function mapEditorToConfig(editor: EditorFormData, base: WeddingConfig): Wedding
       ...base.socialLinks,
       instagram: str(editor.instagram, base.socialLinks?.instagram) as string | undefined,
     }
+  }
+
+  if (editor.sections) {
+    merged.sections = editor.sections as Record<string, boolean>
   }
 
   return merged
