@@ -42,15 +42,6 @@ export default function LoadingScreen({ onComplete }: Props) {
           <img src="/assets/man2.png" alt="" style={{ width: 64, height: 64, opacity: 0.5 }} />
         </motion.div>
 
-        {/* Center lotus emoji */}
-        <motion.div
-          className="relative z-10 text-4xl"
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-          style={{ filter: 'drop-shadow(0 0 16px var(--color-glow-strong))' }}
-        >
-          <span style={{ fontSize: 48, color: 'var(--color-accent)' }}>ॐ</span>
-        </motion.div>
       </div>
 
       {/* Line draw animation */}
