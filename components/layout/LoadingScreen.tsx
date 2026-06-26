@@ -13,58 +13,33 @@ export default function LoadingScreen({ onComplete }: Props) {
     >
       {/* Lotus mandala */}
       <div className="relative w-40 h-40 flex items-center justify-center mb-8">
-        {/* Outer ring CW */}
+        {/* Outer ring CW — wheel.png */}
         <motion.div
-          className="absolute inset-0"
+          className="absolute inset-0 flex items-center justify-center"
           animate={{ rotate: 360 }}
           transition={{ duration: 12, repeat: Infinity, ease: 'linear' }}
         >
-          <svg viewBox="0 0 160 160" width="160" height="160" aria-hidden>
-            <circle cx="80" cy="80" r="72" fill="none" stroke="var(--color-accent)" strokeWidth="0.8" opacity="0.25" strokeDasharray="4 6" />
-            {[0,45,90,135,180,225,270,315].map((deg, i) => (
-              <ellipse key={i} cx="80" cy="80" rx="4" ry="10"
-                fill={i % 2 === 0 ? 'var(--color-accent)' : 'var(--color-accent2)'}
-                opacity="0.6"
-                transform={`rotate(${deg} 80 80) translate(0,-62)`}
-              />
-            ))}
-          </svg>
+          <img src="/assets/wheel.png" alt="" style={{ width: 160, height: 160, opacity: 0.7 }} />
         </motion.div>
 
-        {/* Middle ring CCW */}
+        {/* Middle ring CCW — mandala.png */}
         <motion.div
-          className="absolute"
+          className="absolute flex items-center justify-center"
           style={{ width: 110, height: 110 }}
           animate={{ rotate: -360 }}
           transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
         >
-          <svg viewBox="0 0 110 110" width="110" height="110" aria-hidden>
-            {[0,36,72,108,144,180,216,252,288,324].map((deg, i) => (
-              <ellipse key={i} cx="55" cy="55" rx="3" ry="7"
-                fill={i % 2 === 0 ? 'var(--color-accent3)' : 'var(--color-accent)'}
-                opacity="0.5"
-                transform={`rotate(${deg} 55 55) translate(0,-42)`}
-              />
-            ))}
-          </svg>
+          <img src="/assets/mandala.png" alt="" style={{ width: 110, height: 110, opacity: 0.6 }} />
         </motion.div>
 
-        {/* Inner lotus */}
+        {/* Inner — man2.png */}
         <motion.div
-          className="absolute"
+          className="absolute flex items-center justify-center"
           style={{ width: 64, height: 64 }}
           animate={{ rotate: 360 }}
           transition={{ duration: 16, repeat: Infinity, ease: 'linear' }}
         >
-          <svg viewBox="0 0 64 64" width="64" height="64" aria-hidden>
-            {[0,60,120,180,240,300].map((deg, i) => (
-              <ellipse key={i} cx="32" cy="32" rx="5" ry="12"
-                fill="var(--color-accent)"
-                opacity="0.4"
-                transform={`rotate(${deg} 32 32) translate(0,-18)`}
-              />
-            ))}
-          </svg>
+          <img src="/assets/man2.png" alt="" style={{ width: 64, height: 64, opacity: 0.5 }} />
         </motion.div>
 
         {/* Center lotus emoji */}
