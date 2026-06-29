@@ -13,33 +13,33 @@ export default function LoadingScreen({ onComplete }: Props) {
     >
       {/* Lotus mandala */}
       <div className="relative w-40 h-40 flex items-center justify-center mb-8">
-        {/* Outer ring CW — wheel.png */}
+        {/* Outer ring CW — wheel.webp */}
         <motion.div
           className="absolute inset-0 flex items-center justify-center"
           animate={{ rotate: 360 }}
           transition={{ duration: 12, repeat: Infinity, ease: 'linear' }}
         >
-          <img src="/assets/wheel.png" alt="" style={{ width: 160, height: 160, opacity: 0.7 }} />
+          <img src="/assets/wheel.webp" alt="" style={{ width: 160, height: 160, opacity: 0.7 }} />
         </motion.div>
 
-        {/* Middle ring CCW — mandala.png */}
+        {/* Middle ring CCW — mandala.webp */}
         <motion.div
           className="absolute flex items-center justify-center"
           style={{ width: 110, height: 110 }}
           animate={{ rotate: -360 }}
           transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
         >
-          <img src="/assets/mandala.png" alt="" style={{ width: 110, height: 110, opacity: 0.6 }} />
+          <img src="/assets/mandala.webp" alt="" style={{ width: 110, height: 110, opacity: 0.6 }} />
         </motion.div>
 
-        {/* Inner — man2.png */}
+        {/* Inner — man2.webp */}
         <motion.div
           className="absolute flex items-center justify-center"
           style={{ width: 64, height: 64 }}
           animate={{ rotate: 360 }}
           transition={{ duration: 16, repeat: Infinity, ease: 'linear' }}
         >
-          <img src="/assets/man2.png" alt="" style={{ width: 64, height: 64, opacity: 0.5 }} />
+          <img src="/assets/man2.webp" alt="" style={{ width: 64, height: 64, opacity: 0.5 }} />
         </motion.div>
 
       </div>

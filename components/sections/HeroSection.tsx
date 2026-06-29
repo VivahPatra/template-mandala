@@ -38,16 +38,16 @@ export default function HeroSection() {
         background: 'radial-gradient(ellipse 70% 70% at 50% 50%, rgba(34,20,53,1) 0%, var(--color-bg) 100%)',
       }} />
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <img src="/assets/wheel.png" alt="" className="mandala-spin" style={{ width: '80%', maxWidth: 600, height: 'auto', opacity: 0.08 }} />
+        <img src="/assets/wheel.webp" alt="" className="mandala-spin" style={{ width: '80%', maxWidth: 600, height: 'auto', opacity: 0.08 }} />
       </div>
 
       {/* Rotating mandala layers */}
       <motion.div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ scale: mandalaScale }} aria-hidden>
         <div className="absolute mandala-spin" style={{ opacity: 0.32 }}>
-          <img src="/assets/wheel.png" alt="" style={{ width: 700, height: 'auto' }} />
+          <img src="/assets/wheel.webp" alt="" style={{ width: 700, height: 'auto' }} />
         </div>
         <div className="absolute mandala-spin-reverse" style={{ opacity: 0.38 }}>
-          <img src="/assets/mandala.png" alt="" style={{ width: 500, height: 'auto' }} />
+          <img src="/assets/mandala.webp" alt="" style={{ width: 500, height: 'auto' }} />
         </div>
         <div className="absolute mandala-spin" style={{ opacity: 0.1 }}>
           <MandalaRing size={320} petals={12} color="var(--color-accent)" opacity={0.5} />
@@ -69,14 +69,14 @@ export default function HeroSection() {
 
       {/* Mandala at top and bottom — half visible */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" aria-hidden>
-        <img src="/assets/mandala.png" alt="" className="mandala-spin" style={{ width: 400, height: 'auto', opacity: 0.55 }} />
+        <img src="/assets/mandala.webp" alt="" className="mandala-spin" style={{ width: 400, height: 'auto', opacity: 0.55 }} />
       </div>
       {/* man2 left and right — half visible */}
       <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none" aria-hidden>
-        <img src="/assets/man2.png" alt="" className="mandala-spin" style={{ width: 400, height: 'auto', opacity: 0.2 }} />
+        <img src="/assets/man2.webp" alt="" className="mandala-spin" style={{ width: 400, height: 'auto', opacity: 0.2 }} />
       </div>
       <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 pointer-events-none" aria-hidden>
-        <img src="/assets/man2.png" alt="" className="mandala-spin-reverse" style={{ width: 400, height: 'auto', opacity: 0.2 }} />
+        <img src="/assets/man2.webp" alt="" className="mandala-spin-reverse" style={{ width: 400, height: 'auto', opacity: 0.2 }} />
       </div>
 
       {/* Sacred geometry border */}

@@ -140,7 +140,7 @@ export default function EventsSection() {
       <FlowerOverlay />
       {/* man2 background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <img src="/assets/man2.png" alt="" className="mandala-spin" style={{ width: '100%', height: 'auto', opacity: 0.2 }} />
+        <img src="/assets/man2.webp" alt="" className="mandala-spin" style={{ width: '100%', height: 'auto', opacity: 0.2 }} />
       </div>
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Heading */}

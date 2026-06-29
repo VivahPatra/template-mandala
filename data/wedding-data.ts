@@ -10,15 +10,15 @@ export const weddingData: WeddingConfig = {
   tagline: 'Where sacred circles meet eternal love',
   invitationText:
     'With divine blessings and the love of our families, Meera and Dev joyfully invite you to witness the union of two souls. Your presence will complete the sacred circle of our celebration.',
-  heroImage: '/assets/palace.png',
+  heroImage: '/assets/palace.webp',
 
   events: [
-    { id: 'engagement', name: 'Engagement', emoji: '💍', date: 'January 16, 2027', time: '6:00 PM', venue: 'The Royal Garden', venueAddress: 'MG Road, Jaipur', image: '/assets/events/engagement.png', color: '#d4a830', description: 'Rings, promises and sacred beginnings.' },
-    { id: 'mehendi', name: 'Mehendi', emoji: '🌿', date: 'January 18, 2027', time: '4:00 PM', venue: 'Haveli Courtyard', venueAddress: 'Old City, Jaipur', image: '/assets/events/mehendi.png', color: '#2a8a6a', description: 'Intricate patterns, laughter and music.' },
-    { id: 'sangeet', name: 'Sangeet', emoji: '🎶', date: 'January 18, 2027', time: '8:00 PM', venue: 'The Grand Palace', venueAddress: 'Amber Fort Road, Jaipur', image: '/assets/events/sangeet.png', color: '#8b3a8b', description: 'Dance under the stars in the Pink City.' },
-    { id: 'haldi', name: 'Haldi', emoji: '✨', date: 'January 19, 2027', time: '10:00 AM', venue: 'Family Courtyard', venueAddress: 'C-Scheme, Jaipur', image: '/assets/events/haldi.png', color: '#d4a830', description: 'Golden blessings for a golden future.' },
-    { id: 'wedding', name: 'Wedding', emoji: '🔥', date: 'January 20, 2027', time: '9:00 AM', venue: 'Lakshmi Narayan Mandir', venueAddress: 'JLN Marg, Jaipur', image: '/assets/events/wedding.png', color: '#c04050', description: 'Seven circles, one eternal bond.' },
-    { id: 'reception', name: 'Reception', emoji: '🥂', date: 'January 20, 2027', time: '7:00 PM', venue: 'The Grand Palace', venueAddress: 'Amber Fort Road, Jaipur', image: '/assets/events/reception.png', color: '#8b3a8b', description: 'A night of celebration and joy.' },
+    { id: 'engagement', name: 'Engagement', emoji: '💍', date: 'January 16, 2027', time: '6:00 PM', venue: 'The Royal Garden', venueAddress: 'MG Road, Jaipur', image: '/assets/events/engagement.webp', color: '#d4a830', description: 'Rings, promises and sacred beginnings.' },
+    { id: 'mehendi', name: 'Mehendi', emoji: '🌿', date: 'January 18, 2027', time: '4:00 PM', venue: 'Haveli Courtyard', venueAddress: 'Old City, Jaipur', image: '/assets/events/mehendi.webp', color: '#2a8a6a', description: 'Intricate patterns, laughter and music.' },
+    { id: 'sangeet', name: 'Sangeet', emoji: '🎶', date: 'January 18, 2027', time: '8:00 PM', venue: 'The Grand Palace', venueAddress: 'Amber Fort Road, Jaipur', image: '/assets/events/sangeet.webp', color: '#8b3a8b', description: 'Dance under the stars in the Pink City.' },
+    { id: 'haldi', name: 'Haldi', emoji: '✨', date: 'January 19, 2027', time: '10:00 AM', venue: 'Family Courtyard', venueAddress: 'C-Scheme, Jaipur', image: '/assets/events/haldi.webp', color: '#d4a830', description: 'Golden blessings for a golden future.' },
+    { id: 'wedding', name: 'Wedding', emoji: '🔥', date: 'January 20, 2027', time: '9:00 AM', venue: 'Lakshmi Narayan Mandir', venueAddress: 'JLN Marg, Jaipur', image: '/assets/events/wedding.webp', color: '#c04050', description: 'Seven circles, one eternal bond.' },
+    { id: 'reception', name: 'Reception', emoji: '🥂', date: 'January 20, 2027', time: '7:00 PM', venue: 'The Grand Palace', venueAddress: 'Amber Fort Road, Jaipur', image: '/assets/events/reception.webp', color: '#8b3a8b', description: 'A night of celebration and joy.' },
   ],
 
   galleryImages: [

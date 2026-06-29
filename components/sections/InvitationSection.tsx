@@ -29,10 +29,10 @@ export default function InvitationSection() {
         {/* man2 left and right of card */}
         <div className="relative">
           <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none" aria-hidden>
-            <img src="/assets/man2.png" alt="" className="mandala-spin" style={{ width: 325, height: 'auto', opacity: 0.15 }} />
+            <img src="/assets/man2.webp" alt="" className="mandala-spin" style={{ width: 325, height: 'auto', opacity: 0.15 }} />
           </div>
           <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 pointer-events-none" aria-hidden>
-            <img src="/assets/man2.png" alt="" className="mandala-spin-reverse" style={{ width: 325, height: 'auto', opacity: 0.15 }} />
+            <img src="/assets/man2.webp" alt="" className="mandala-spin-reverse" style={{ width: 325, height: 'auto', opacity: 0.15 }} />
           </div>
 
         {/* Invitation card */}
@@ -59,8 +59,8 @@ export default function InvitationSection() {
             <div className="flex flex-col items-center mb-4">
               <div style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div className="ganesha-backdrop" style={{ position: 'absolute', inset: -8, borderRadius: '50%', background: 'radial-gradient(circle, rgba(212,168,48,0.6) 0%, rgba(139,58,139,0.2) 50%, transparent 75%)', filter: 'blur(12px)' }} />
-                <img src="/assets/man3.png" alt="" className="ganesha-glow mandala-spin" style={{ width: 80, height: 'auto', position: 'relative', zIndex: 1 }} />
-                <img src="/assets/man4.png" alt="" style={{ width: 45, height: 'auto', position: 'absolute', zIndex: 2 }} />
+                <img src="/assets/man3.webp" alt="" className="ganesha-glow mandala-spin" style={{ width: 80, height: 'auto', position: 'relative', zIndex: 1 }} />
+                <img src="/assets/man4.webp" alt="" style={{ width: 45, height: 'auto', position: 'absolute', zIndex: 2 }} />
               </div>
               <p className="font-sans text-xs tracking-[0.3em] uppercase mt-3 glow-pulse" style={{ color: 'var(--color-accent)', opacity: 0.6 }}>
                 {weddingData.invitationBlessing || '॥ Shree Ganeshaya Namah ॥'}
