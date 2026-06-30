@@ -102,7 +102,7 @@ export default function HeroSection() {
         </motion.p>
 
         <motion.div variants={fadeUp} className="mb-4">
-          <h1 className="font-display shimmer-text" style={{ fontSize: 'clamp(2.4rem, 7vw, 5.5rem)', lineHeight: 1.2, padding: '0.1em 0', letterSpacing: '0.04em', textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 0 40px rgba(212,168,48,0.2)' }}>
+          <h1 className="font-display shimmer-text" style={{ fontSize: 'clamp(2.4rem, 7vw, 5.5rem)', lineHeight: 1.5, padding: '0.15em 0', letterSpacing: '0.04em', textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 0 40px rgba(212,168,48,0.2)' }}>
             {weddingData.groomName}
           </h1>
           <div className="flex items-center justify-center gap-6 my-3">
@@ -110,7 +110,7 @@ export default function HeroSection() {
             <span className="font-display text-2xl glow-pulse" style={{ color: 'var(--color-accent)' }}>&amp;</span>
             <div className="h-px w-16 md:w-24" style={{ background: 'linear-gradient(to left, transparent, var(--color-accent))' }} />
           </div>
-          <h1 className="font-display shimmer-text" style={{ fontSize: 'clamp(2.4rem, 7vw, 5.5rem)', lineHeight: 1.2, padding: '0.1em 0', letterSpacing: '0.04em', textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 0 40px rgba(212,168,48,0.2)' }}>
+          <h1 className="font-display shimmer-text" style={{ fontSize: 'clamp(2.4rem, 7vw, 5.5rem)', lineHeight: 1.5, padding: '0.15em 0', letterSpacing: '0.04em', textShadow: '0 4px 20px rgba(0,0,0,0.5), 0 0 40px rgba(212,168,48,0.2)' }}>
             {weddingData.brideName}
           </h1>
         </motion.div>
