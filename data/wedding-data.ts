@@ -12,6 +12,7 @@ export const weddingData: WeddingConfig = {
     'With divine blessings and the love of our families, Meera and Dev joyfully invite you to witness the union of two souls. Your presence will complete the sacred circle of our celebration.',
   heroImage: '/assets/palace.webp',
 
+  backgroundMusic: 'https://vivahpatra.co/music/saathiya.mp3',
   events: [
     { id: 'engagement', name: 'Engagement', emoji: '💍', date: 'January 16, 2027', time: '6:00 PM', venue: 'The Royal Garden', venueAddress: 'MG Road, Jaipur', image: '/assets/events/engagement.webp', color: '#d4a830', description: 'Rings, promises and sacred beginnings.' },
     { id: 'mehendi', name: 'Mehendi', emoji: '🌿', date: 'January 18, 2027', time: '4:00 PM', venue: 'Haveli Courtyard', venueAddress: 'Old City, Jaipur', image: '/assets/events/mehendi.webp', color: '#2a8a6a', description: 'Intricate patterns, laughter and music.' },

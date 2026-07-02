@@ -24,6 +24,7 @@ interface EditorFormData {
   rsvpHeading?: string
   rsvpText?: string
   heroImage?: string
+  backgroundMusic?: string
   galleryImages?: Array<{ src: string; alt?: string; span?: string }>
   events?: Array<{
     id: string
@@ -84,6 +85,7 @@ function mapEditorToConfig(editor: EditorFormData, base: WeddingConfig): Wedding
 
   // Media fields
   merged.heroImage = str(editor.heroImage, base.heroImage) as string
+  merged.backgroundMusic = str(editor.backgroundMusic, base.backgroundMusic) as string | undefined
 
   // Wedding date: convert string to Date
   if (editor.weddingDate && editor.weddingDate.trim() !== '') {
